@@ -1,0 +1,90 @@
+import { FaGithub, FaCode } from "react-icons/fa";
+import { SiOpensourceinitiative } from "react-icons/si";
+import { VscGithub } from "react-icons/vsc";
+
+const GitHubShowcase = () => {
+  const repos = [
+    {
+      name: "SAST",
+      moto: "Exploring the cosmos through code and collaboration.",
+      description:
+        "Welcome to the official repository of the SAST website — a collaborative space to build a vibrant platform showcasing our club's spirit, achievements, and events.",
+      logo: "/assets/sast-logo.png",
+      link: "https://github.com/SASTxNST/Website_SAST",
+    },
+    {
+      name: "Nebula",
+      moto: "The flagship open-source initiative of the Society for Astrophysics and Space Technology (SAST)",
+      description:
+        "Project Nebula is envisioned to be a collaborative platform that blends innovation, learning, and real-world development. At its core, Nebula aims to empower SAST members—especially juniors—by immersing them in the world of open-source contribution and full-stack development.",
+      logo: "/assets/nebula-logo.png",
+      link: "https://github.com/SASTxNST/Nebula",
+    },
+  ];
+
+  return (
+    <div className="w-full min-h-screen bg-black flex items-center justify-center py-16 px-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl w-full relative">
+        {/* Background icons */}
+        <FaCode
+          className="absolute top-20 left-10 text-blue-400 opacity-25 blur-md pointer-events-none"
+          size={150}
+          style={{ zIndex: 0 }}
+        />
+        <SiOpensourceinitiative
+          className="absolute bottom-32 right-20 text-green-400 opacity-25 blur-md pointer-events-none"
+          size={140}
+          style={{ zIndex: 0 }}
+        />
+        <VscGithub
+          className="absolute bottom-16 left-16 text-gray-400 opacity-25 blur-md pointer-events-none"
+          size={130}
+          style={{ zIndex: 0 }}
+        />
+
+        {repos.map((repo, index) => (
+          <div
+            key={index}
+            className="relative rounded-3xl p-[2px] bg-gradient-to-br from-[#2a0000] via-[#0a0a0a] to-[#001d3d]"
+          >
+            <div className="relative h-[20rem] rounded-[22px] bg-black/60 backdrop-blur-lg text-white p-8 flex flex-col justify-between shadow-xl overflow-hidden z-10">
+              <div>
+                {/* Logo + Repo Name */}
+                <div className="flex items-center gap-4 mb-5 relative z-10">
+                  <img
+                    src={repo.logo}
+                    alt={repo.name}
+                    className="w-14 h-14 object-contain rounded-lg bg-white/10 p-1"
+                  />
+                  <div>
+                    <h2 className="text-2xl font-semibold">{repo.name}</h2>
+                    <p className="text-sm text-white/60">{repo.moto}</p>
+                  </div>
+                </div>
+
+                {/* Description */}
+                <p className="text-sm text-white/80 leading-relaxed mt-2 relative z-10">
+                  {repo.description}
+                </p>
+              </div>
+
+              {/* GitHub Link */}
+              <div className="mt-6 relative z-10">
+                <a
+                  href={repo.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-500 transition underline text-sm"
+                >
+                  <FaGithub /> View on GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default GitHubShowcase;
