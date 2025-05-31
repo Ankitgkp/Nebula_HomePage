@@ -69,7 +69,8 @@ const NebulaHero: React.FC = () => {
         <div ref={dot3Ref} className="orbit-dot ring2" />
         <div ref={dot4Ref} className="orbit-dot ring2" />
       </div>
-      <h1 className="nebula-text">Nebula</h1>
+      <h1 className="nebula-text">
+        <span className="nebula-highlight"></span>NEBULA</h1>
     </div>
   );
 };
