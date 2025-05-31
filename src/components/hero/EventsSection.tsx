@@ -1,10 +1,9 @@
+"use client";
+
+import React, { useRef } from "react";
 import { FaRocket, FaStar, FaGithub, FaCode } from "react-icons/fa";
 
-interface EventsSectionProps {
-  transparentBackground?: boolean;
-}
-
-const EventsSection: React.FC<EventsSectionProps> = () => {
+const EventsSection: React.FC = () => {
   const events = [
     {
       title: "Astrothon 2025",
@@ -28,11 +27,9 @@ const EventsSection: React.FC<EventsSectionProps> = () => {
 
   return (
     <div className="relative min-h-screen w-full bg-black flex flex-col items-center justify-center py-20 px-6 overflow-hidden">
-      {/* Blurred background blobs */}
       <div className="absolute top-[-5rem] left-[-5rem] w-96 h-96 bg-gradient-to-tr from-[#2a0000] via-purple-700 to-blue-700 opacity-20 rounded-full blur-[120px]" />
       <div className="absolute bottom-[-5rem] right-[-5rem] w-96 h-96 bg-gradient-to-br from-red-800 via-pink-600 to-purple-700 opacity-20 rounded-full blur-[120px]" />
 
-      {/* Subtle blurred space & open source icons background */}
       <FaRocket
         className="absolute top-20 left-10 text-purple-700 opacity-10 blur-sm pointer-events-none"
         size={150}
@@ -50,21 +47,20 @@ const EventsSection: React.FC<EventsSectionProps> = () => {
         size={130}
       />
 
-      {/* Heading */}
       <h2
-        className="text-5xl md:text-6xl font-bold text-white mb-16 z-10 text-center tracking-wide"
+        className="text-5xl md:text-5xl font-bold text-white mb-16 z-10 text-center tracking-wide"
         style={{ fontFamily: '"Nebula Hollow", sans-serif' }}
       >
-        🚀 Upcoming Events
+        Upcoming Events
       </h2>
 
-      {/* Event Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl w-full z-10">
-        {events.map((event, index) => (
-          <div key={index} className="relative bg-white/3 rounded-2xl p-6">
-            {/* Abstract floating shape */}
+        {events.map((event, idx) => (
+          <div
+            key={idx}
+            className="relative bg-white/3 rounded-2xl p-6 shadow-xl backdrop-blur-md"
+          >
             <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-red-500 to-purple-700 opacity-30 rotate-45 rounded-3xl blur-md pointer-events-none" />
-
             <h3 className="text-xl font-semibold text-white mb-2">
               {event.title}
             </h3>

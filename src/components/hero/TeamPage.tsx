@@ -1,11 +1,9 @@
+"use client";
+
 import React from "react";
 import { FaUsers, FaHandshake, FaRocket, FaStar } from "react-icons/fa";
 
-interface TeamPageProps {
-  transparentBackground?: boolean;
-}
-
-const TeamPage: React.FC<TeamPageProps> = () => {
+const TeamPage: React.FC = () => {
   const teamMembers = [
     {
       name: "Ankit Sharma",
@@ -35,11 +33,9 @@ const TeamPage: React.FC<TeamPageProps> = () => {
 
   return (
     <div className="relative min-h-screen w-full bg-black flex flex-col items-center justify-center py-20 px-6 overflow-hidden">
-      {/* Blurred background blobs */}
       <div className="absolute top-[-5rem] left-[-5rem] w-96 h-96 bg-gradient-to-tr from-indigo-900 via-blue-900 to-cyan-800 opacity-20 rounded-full blur-[120px]" />
       <div className="absolute bottom-[-5rem] right-[-5rem] w-96 h-96 bg-gradient-to-br from-purple-900 via-pink-900 to-red-900 opacity-20 rounded-full blur-[120px]" />
 
-      {/* Subtle blurred teamwork & space icons */}
       <FaUsers
         className="absolute top-20 left-16 text-indigo-700 opacity-10 blur-sm pointer-events-none"
         size={140}
@@ -57,25 +53,23 @@ const TeamPage: React.FC<TeamPageProps> = () => {
         size={120}
       />
 
-      {/* Heading */}
       <h2
-        className="text-5xl md:text-6xl font-bold text-white mb-16 z-10 text-center tracking-wide"
+        className="text-5xl md:text-5xl font-bold text-white mb-16 z-10 text-center tracking-wide"
         style={{ fontFamily: '"Nebula Hollow", sans-serif' }}
       >
-        👩‍🚀 Meet The Team
+        Meet The Team
       </h2>
 
-      {/* Team Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 max-w-6xl w-full z-10">
         {teamMembers.map((member, idx) => (
           <div
             key={idx}
-            className="relative bg-white/3 rounded-2xl p-6 flex flex-col items-center text-center"
+            className="relative bg-white/5 rounded-2xl p-6 flex flex-col items-center text-center shadow-xl backdrop-blur-md"
           >
             <img
               src={member.photo}
               alt={member.name}
-              className="w-32 h-32 rounded-full mb-6 border-2 border-white/20 object-cover"
+              className="w-28 h-28 rounded-full mb-6 border-2 border-white/20 object-cover"
             />
             <h3 className="text-xl font-semibold text-white mb-1">
               {member.name}

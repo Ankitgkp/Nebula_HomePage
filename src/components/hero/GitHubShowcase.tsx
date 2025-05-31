@@ -1,6 +1,8 @@
-import { FaGithub, FaCode } from "react-icons/fa";
-import { SiOpensourceinitiative } from "react-icons/si";
-import { VscGithub } from "react-icons/vsc";
+"use client";
+import React from "react";
+import { FaGithub } from "react-icons/fa";
+import { SiOpenproject } from "react-icons/si";
+import { BsRocketTakeoff } from "react-icons/bs";
 
 const GitHubShowcase = () => {
   const repos = [
@@ -24,32 +26,18 @@ const GitHubShowcase = () => {
 
   return (
     <div className="w-full min-h-screen bg-black flex items-center justify-center py-16 px-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl w-full relative">
-        {/* Background icons */}
-        <FaCode
-          className="absolute top-20 left-10 text-blue-400 opacity-25 blur-md pointer-events-none"
-          size={150}
-          style={{ zIndex: 0 }}
-        />
-        <SiOpensourceinitiative
-          className="absolute bottom-32 right-20 text-green-400 opacity-25 blur-md pointer-events-none"
-          size={140}
-          style={{ zIndex: 0 }}
-        />
-        <VscGithub
-          className="absolute bottom-16 left-16 text-gray-400 opacity-25 blur-md pointer-events-none"
-          size={130}
-          style={{ zIndex: 0 }}
-        />
-
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl w-full">
         {repos.map((repo, index) => (
           <div
             key={index}
-            className="relative rounded-3xl p-[2px] bg-gradient-to-br from-[#2a0000] via-[#0a0a0a] to-[#001d3d]"
+            className="relative rounded-3xl p-[2px] bg-gradient-to-br from-[#2a0000] via-[#0a0a0a] to-[#001d3d] shadow-lg"
           >
-            <div className="relative h-[20rem] rounded-[22px] bg-black/60 backdrop-blur-lg text-white p-8 flex flex-col justify-between shadow-xl overflow-hidden z-10">
+            <div className="relative h-[20rem] rounded-[22px] bg-black/60 backdrop-blur-lg text-white p-8 flex flex-col justify-between overflow-hidden">
+              <BsRocketTakeoff className="absolute top-10 left-10 text-white/10 text-[5rem] rotate-12 blur-sm pointer-events-none" />
+              <SiOpenproject className="absolute bottom-20 right-10 text-blue-900/20 text-[4rem] blur-[1px] pointer-events-none" />
+              <FaGithub className="absolute bottom-4 left-4 text-white/10 text-[3.5rem] blur-sm pointer-events-none" />
+
               <div>
-                {/* Logo + Repo Name */}
                 <div className="flex items-center gap-4 mb-5 relative z-10">
                   <img
                     src={repo.logo}
@@ -62,19 +50,17 @@ const GitHubShowcase = () => {
                   </div>
                 </div>
 
-                {/* Description */}
                 <p className="text-sm text-white/80 leading-relaxed mt-2 relative z-10">
                   {repo.description}
                 </p>
               </div>
 
-              {/* GitHub Link */}
               <div className="mt-6 relative z-10">
                 <a
                   href={repo.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-500 transition underline text-sm"
+                  className="inline-flex items-center gap-2 text-blue-400 transition underline text-sm"
                 >
                   <FaGithub /> View on GitHub
                 </a>

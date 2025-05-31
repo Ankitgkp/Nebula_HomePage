@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+.fp-watermark,
+.fp-credit {
+  display: none !important;
+}
