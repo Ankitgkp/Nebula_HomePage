@@ -1,6 +1,5 @@
 "use client";
 
-import React, { useRef } from "react";
 import { FaRocket, FaStar, FaGithub, FaCode } from "react-icons/fa";
 
 const EventsSection: React.FC = () => {
