@@ -1,134 +1,75 @@
-// import React, { useEffect, useRef } from 'react';
-// import styles from './NebulaHero.module.css';
-
-// const NebulaHero: React.FC = () => {
-//   const dot1Ref = useRef<HTMLDivElement>(null);
-//   const dot2Ref = useRef<HTMLDivElement>(null);
-
-//   useEffect(() => {
-//     let animationFrameId: number;
-//     let progress1 = 0;
-//     let progress2 = Math.PI;
-
-//     const animate = () => {
-//       progress1 += 0.005;
-//       progress2 += 0.005;
-
-//       const a = 180;
-//       const b = 80;
-//       const angle = -40 * (Math.PI / 180);
-
-//       const x1 = a * Math.cos(progress1);
-//       const y1 = b * Math.sin(progress1);
-//       const rotatedX1 = x1 * Math.cos(angle) - y1 * Math.sin(angle);
-//       const rotatedY1 = x1 * Math.sin(angle) + y1 * Math.cos(angle);
-
-//       const x2 = a * Math.cos(progress2);
-//       const y2 = b * Math.sin(progress2);
-//       const rotatedX2 = x2 * Math.cos(angle) - y2 * Math.sin(angle);
-//       const rotatedY2 = x2 * Math.sin(angle) + y2 * Math.cos(angle);
-
-//       if (dot1Ref.current) {
-//         dot1Ref.current.style.transform = `translate(${rotatedX1}px, ${rotatedY1}px)`;
-//       }
-//       if (dot2Ref.current) {
-//         dot2Ref.current.style.transform = `translate(${rotatedX2}px, ${rotatedY2}px)`;
-//       }
-
-//       animationFrameId = requestAnimationFrame(animate);
-//     };
-
-//     animate();
-
-//     return () => {
-//       cancelAnimationFrame(animationFrameId);
-//     };
-//   }, []);
-
-//   return (
-//     <div className={styles.heroContainer}>
-//       <div className={styles.orbitContainer}>
-//         <div className={styles.ellipticalOrbit}></div>
-//         <div ref={dot1Ref} className={`${styles.orbitDot} ${styles.dot1}`}></div>
-//         <div ref={dot2Ref} className={`${styles.orbitDot} ${styles.dot2}`}></div>
-//       </div>
-//       <h1 className={styles.nebulaText}>Nebula</h1>
-//     </div>
-//   );
-// };
-
-// export default NebulaHero;
-
-import React, { useEffect, useRef } from 'react';
-import './NebulaHero.css';
+import React, { useEffect, useRef } from "react";
+import "./NebulaHero.css";
 
 const NebulaHero: React.FC = () => {
   const dot1Ref = useRef<HTMLDivElement>(null);
   const dot2Ref = useRef<HTMLDivElement>(null);
-  const textRef = useRef<HTMLHeadingElement>(null);
+  const dot3Ref = useRef<HTMLDivElement>(null);
+  const dot4Ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!textRef.current) return;
-
     let animationFrameId: number;
     let progress1 = 0;
-    let progress2 = Math.PI; // Start the second dot halfway
+    let progress2 = Math.PI;
+    let progress3 = Math.PI / 2;
+    let progress4 = (3 * Math.PI) / 2;
 
     const animate = () => {
-      // Update progress (speed can be adjusted by changing the increment value)
-      progress1 += 0.005;
-      progress2 += 0.005;
+      progress1 += 0.01;
+      progress2 += 0.01;
+      progress3 += 0.01;
+      progress4 += 0.01;
 
-      // Get text dimensions
-      const textRect = textRef.current?.getBoundingClientRect();
-      const textWidth = textRect?.width || 300;
-      const textHeight = textRect?.height || 100;
+      const a1 = window.innerWidth * 0.3;
+      const b1 = window.innerWidth * 0.1;
+      const angle1 = (-40 * Math.PI) / 180;
 
-      // Calculate elliptical path dimensions based on text size
-      const a = textWidth * 0.6; // Horizontal radius (60% of text width)
-      const b = textHeight * 0.8; // Vertical radius (80% of text height)
-      const angle = -40 * (Math.PI / 180); // Convert tilt angle to radians
+      const a2 = a1 * 0.9; // slightly smaller second ring
+      const b2 = b1 * 1.2; // slightly taller
+      const angle2 = (-20 * Math.PI) / 180; // different tilt
 
-      // Calculate position for dot 1
-      const x1 = a * Math.cos(progress1);
-      const y1 = b * Math.sin(progress1);
-      // Rotate the ellipse
-      const rotatedX1 = x1 * Math.cos(angle) - y1 * Math.sin(angle);
-      const rotatedY1 = x1 * Math.sin(angle) + y1 * Math.cos(angle);
+      const setDotPosition = (
+        ref: React.RefObject<HTMLDivElement>,
+        t: number,
+        a: number,
+        b: number,
+        angle: number
+      ) => {
+        const x = a * Math.cos(t);
+        const y = b * Math.sin(t);
 
-      // Calculate position for dot 2
-      const x2 = a * Math.cos(progress2);
-      const y2 = b * Math.sin(progress2);
-      // Rotate the ellipse
-      const rotatedX2 = x2 * Math.cos(angle) - y2 * Math.sin(angle);
-      const rotatedY2 = x2 * Math.sin(angle) + y2 * Math.cos(angle);
+        const rotatedX = x * Math.cos(angle) - y * Math.sin(angle);
+        const rotatedY = x * Math.sin(angle) + y * Math.cos(angle);
 
-      // Apply positions to dots
-      if (dot1Ref.current) {
-        dot1Ref.current.style.transform = `translate(${rotatedX1}px, ${rotatedY1}px)`;
-      }
-      if (dot2Ref.current) {
-        dot2Ref.current.style.transform = `translate(${rotatedX2}px, ${rotatedY2}px)`;
-      }
+        if (ref.current) {
+          ref.current.style.transform = `translate(calc(-50% + ${rotatedX}px), calc(-50% + ${rotatedY}px))`;
+        }
+      };
+
+      setDotPosition(dot1Ref, progress1, a1, b1, angle1);
+      setDotPosition(dot2Ref, progress2, a1, b1, angle1);
+
+      setDotPosition(dot3Ref, progress3, a2, b2, angle2);
+      setDotPosition(dot4Ref, progress4, a2, b2, angle2);
 
       animationFrameId = requestAnimationFrame(animate);
     };
 
     animate();
-
-    return () => {
-      cancelAnimationFrame(animationFrameId);
-    };
+    return () => cancelAnimationFrame(animationFrameId);
   }, []);
 
   return (
     <div className="hero-container">
       <div className="orbit-container">
-        <div className="elliptical-orbit"></div>
-        <div ref={dot1Ref} className="orbit-dot dot-1"></div>
-        <div ref={dot2Ref} className="orbit-dot dot-2"></div>
+        <div className="elliptical-orbit orbit-ring-1" />
+        <div className="elliptical-orbit orbit-ring-2" />
+        <div ref={dot1Ref} className="orbit-dot ring1" />
+        <div ref={dot2Ref} className="orbit-dot ring1" />
+        <div ref={dot3Ref} className="orbit-dot ring2" />
+        <div ref={dot4Ref} className="orbit-dot ring2" />
       </div>
-      <h1 ref={textRef} className="nebula-text">Nebula</h1>
+      <h1 className="nebula-text">Nebula</h1>
     </div>
   );
 };
