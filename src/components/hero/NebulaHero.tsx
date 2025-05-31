@@ -28,13 +28,14 @@ const NebulaHero: React.FC = () => {
       const b2 = b1 * 1.2; // slightly taller
       const angle2 = (-20 * Math.PI) / 180; // different tilt
 
-      const setDotPosition = (
-        ref: React.RefObject<HTMLDivElement>,
-        t: number,
-        a: number,
-        b: number,
-        angle: number
-      ) => {
+const setDotPosition = (
+  ref: React.RefObject<HTMLDivElement | null>,
+  t: number,
+  a: number,
+  b: number,
+  angle: number
+) => {
+
         const x = a * Math.cos(t);
         const y = b * Math.sin(t);
 
