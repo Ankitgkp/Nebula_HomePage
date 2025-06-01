@@ -7,6 +7,7 @@ import About from "./components/hero/About";
 import GitHubShowcase from "./components/hero/GitHubShowcase";
 import EventsSection from "./components/hero/EventsSection";
 import TeamPage from "./components/hero/TeamPage";
+import AutoScrollingTestimonials from "./components/hero/AutoScrollingTestimonials";
 
 function App() {
   const fullpageRef = useRef<HTMLDivElement>(null);
@@ -34,6 +35,9 @@ function App() {
       </div>
       <div className="section">
         <GitHubShowcase />
+      </div>
+      <div className="section">
+        <AutoScrollingTestimonials />
       </div>
       <div className="section">
         <EventsSection />
