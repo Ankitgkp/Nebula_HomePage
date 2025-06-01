@@ -18,7 +18,7 @@ const GitHubShowcase = () => {
       moto: "The flagship open-source initiative of the Society for Astrophysics and Space Technology (SAST)",
       description:
         "Project Nebula is envisioned to be a collaborative platform that blends innovation, learning, and real-world development. At its core, Nebula aims to empower SAST members—especially juniors—by immersing them in the world of open-source contribution and full-stack development.",
-      logo: "/assets/nebula-logo.png",
+      logo: "https://i.postimg.cc/8C7fbZ8L/Nebula-Logo.png",
       link: "https://github.com/SASTxNST/Nebula",
     },
   ];
