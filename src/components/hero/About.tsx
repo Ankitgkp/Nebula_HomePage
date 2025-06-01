@@ -1,17 +1,18 @@
 const About = () => {
   return (
     <div className="relative w-full min-h-screen bg-black text-white font-sans overflow-hidden">
+      {/* Left Text Section */}
       <div className="absolute top-0 left-0 z-10 p-10 max-w-[45%] h-full flex flex-col justify-center">
         <h1 className="text-5xl lg:text-6xl font-light leading-tight text-white">
-          Lorem ipsum dolor
+          <span>Welcome to</span>
           <br />
-          sit amet{" "}
-          <span className="text-blue-500 font-semibold">
-            consectetur
-            <br />
-            adipiscing elit.
+          <span className="text-blue-500 font-semibold">SAST's</span> own
+          <br />
+          <span className="font-semibold">
+            <span className="text-blue-500">Open-Source</span> Contribution Challenge
           </span>
         </h1>
+
         <a
           href="https://github.com/SASTxNST/Website_SAST"
           target="_blank"
@@ -22,15 +23,17 @@ const About = () => {
         </a>
       </div>
 
+      {/* Background Image & Gradient */}
       <div className="absolute inset-0">
         <div className="w-full h-full bg-gradient-to-l from-black via-black/60 to-transparent z-0 absolute" />
         <img
-          src="https://lh3.googleusercontent.com/9zE3StG50FuHs9PCo6kMTIhWKyIc3vJ2JqxPZEgaKc8WQ2vzAyWR4wqYYhMZ7zkhc0C893COYflGKt70Sb15e4gg7eI=s1600-w1600-h1000" // Replace with your own image or a public path
+          src="https://lh3.googleusercontent.com/9zE3StG50FuHs9PCo6kMTIhWKyIc3vJ2JqxPZEgaKc8WQ2vzAyWR4wqYYhMZ7zkhc0C893COYflGKt70Sb15e4gg7eI=s1600-w1600-h1000"
           alt="Hero"
           className="object-cover w-full h-full opacity-15"
         />
       </div>
 
+      {/* Info Boxes Section */}
       <div className="absolute bottom-0 left-0 w-full px-8 py-6 bg-black/80 backdrop-blur-md z-20">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-xs text-white">
           {[
