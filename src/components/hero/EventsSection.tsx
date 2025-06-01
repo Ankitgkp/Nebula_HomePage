@@ -6,19 +6,19 @@ const EventsSection: React.FC = () => {
   const events = [
     {
       title: "NASA Space Apps Challenge",
-      date: "To be announced",
+      date: "Dates to be announced",
       description:
         "The world’s largest space and science hackathon is coming to our campus! Collaborate with global problem-solvers and build innovative solutions using NASA's open data.",
     },
     {
       title: "Embedded C Workshop",
-      date: "July 22–28, 2025",
+      date: "Dates to be announced",
       description:
         "A week-long hands-on workshop diving deep into Embedded C programming—ideal for aspiring system-level programmers and space hardware enthusiasts.",
     },
     {
       title: "RC Plane Competition",
-      date: "August 12, 2025",
+      date: "Dates to be announced",
       description:
         "Design, build, and fly your own remote-controlled aircraft. Compete in real-world flight challenges that test your engineering and aerodynamics skills.",
     },

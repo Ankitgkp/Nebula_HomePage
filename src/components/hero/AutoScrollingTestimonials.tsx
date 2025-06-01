@@ -5,60 +5,56 @@ interface Testimonial {
   text: string;
   name: string;
   title: string;
-  company?: string;
 }
 
 const testimonialsRow1: Testimonial[] = [
   {
+    id: 0,
+    text: "Organizing the Nebula Competition with SAST was incredible. Days of coding, debugging, and designing paid off when we saw everyone learning and pushing limits together.",
+    name: "Kavya Katal",
+    title: "Vice President, SAST",
+  },
+  {
     id: 1,
-    text: "...e design and the insights it provide. It is",
-    name: "Anonymous",
-    title: "Anonymous",
+    text: "I started with zero knowledge of GitHub, and by the end, I was confidently reviewing PRs and mentoring juniors. Nebula didn’t just teach tech—it built confidence.",
+    name: "Rudraksh Sharma",
+    title: "Website Team, SAST",
   },
   {
     id: 2,
-    text: "Your product is freaking amazing! I finally found something perfect for me to enhance my advanced English to the next level. Stellar work to you all!",
-    name: "Maria Olimova",
-    title: "Anonymus",
+    text: "Being a part of the SAST Club has been a rewarding experience. I’ve contributed to building platforms that support our space tech initiatives and helped bring visibility to our projects.",
+    name: "Ankit Kumar Pandey",
+    title: "Website Team, SAST",
   },
   {
     id: 3,
-    text: "I've been using Fluently on my Mac for over two months now, and I've noticed significant improvements in my English",
-    name: "Rohit Kumar",
-    title: "Software Engineer @Erdonix",
-  },
-  {
-    id: 4,
-    text: "I really love the app, it's design insights that fluently provide. It's commendable.",
-    name: "Harshit Gotherwal",
-    title: "Student @University College London",
+    text: "Working on Project Nebula was a deep dive into teamwork and real-world development. It pushed me to refine my frontend skills, collaborate under pressure, and deliver something that truly mattered to our club.",
+    name: "Pratyush Parida",
+    title: "Website Team",
   },
 ];
 
+
 const testimonialsRow2: Testimonial[] = [
+  
+  {
+    id: 4,
+    text: "From debugging components to improving responsiveness, every task on Project Nebula was a learning curve. It felt great to build something that represents our community’s passion for space and technology.",
+    name: "Abhinav Bajpai",
+    title: "Website Team",
+  },
+  
   {
     id: 5,
-    text: "...to improve my TOEFL exam. I ...en the application.",
-    name: "Anonymous",
-    title: "Anonymous",
+    text: "“Launching Project Nebula in just one week was intense. From building the website to planning outreach and late-night UI/UX reviews, our team gave it everything. Those sleepless nights showed what real collaboration looks like.”.",
+    name: "Neelanshu Karn",
+    title: "President, SAST",
   },
   {
     id: 6,
-    text: "I just wanna tell you that I love your product!",
-    name: "Rafael Matos",
-    title: "Product Manager @Evolt",
-  },
-  {
-    id: 7,
-    text: "Fluently gives really good feedback on design and very natural (no additional actions).",
-    name: "Jeesun",
-    title: "Software developer @Stellar",
-  },
-  {
-    id: 8,
-    text: "The AI-powered suggestions have transformed my writing style completely. Amazing tool!",
-    name: "Sarah Johnson",
-    title: "Content Writer @TechCorp",
+    text: "Being Secretary of SAST has been a rewarding journey. From coordinating events to managing last-minute chaos, it taught me adaptability, teamwork, and leadership.",
+    name: "Rashmi Anand",
+    title: "Secretary, SAST",
   },
 ];
 
@@ -142,7 +138,7 @@ const AutoScrollingTestimonials: React.FC = () => {
           What the team has to say
         </h2>
         <p className="text-slate-400 mt-2 text-sm md:text-base">
-          Hear from our users and team members who experienced it first-hand
+          Hear from our team members who built it first-hand
         </p>
       </div>
       <div className="relative">
