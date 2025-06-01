@@ -12,28 +12,30 @@ const About = () => {
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 flex items-center justify-start px-10 py-20 max-w-6xl mx-auto">
-        <div className="max-w-xl">
-          <h1 className="text-5xl lg:text-6xl font-light leading-tight text-white">
-            <span>Welcome to</span>
-            <br />
-            <span className="text-blue-500 font-semibold">SAST's</span> own
-            <br />
-            <span className="font-semibold">
-              <span className="text-blue-500">Open-Source</span> Contribution Challenge
-            </span>
-          </h1>
+     {/* Main Content */}
+<div className="w-full px-10 py-20 flex justify-start">
+  <div className="max-w-xl">
+    <h1 className="text-5xl lg:text-6xl font-light leading-tight text-white">
+      <span>Welcome to</span>
+      <br />
+      <span className="text-blue-500 font-semibold">SAST's</span> own
+      <br />
+      <span className="font-semibold">
+        <span className="text-blue-500">Open-Source</span> Contribution Challenge
+      </span>
+    </h1>
 
-          <a
-            href="https://github.com/SASTxNST/Website_SAST"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block mt-10 w-fit px-10 py-3 rounded-full text-white text-lg font-medium bg-gradient-to-r from-blue-500 via-blue-600 to-blue-500 shadow-[0_0_16px_rgba(99,102,241,0.2)] backdrop-blur-md border border-white/5 hover:scale-102 transition-transform duration-200"
-          >
-            Contribute
-          </a>
-        </div>
-      </div>
+    <a
+      href="https://github.com/SASTxNST/Website_SAST"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-block mt-10 w-fit px-10 py-3 rounded-full text-white text-lg font-medium bg-gradient-to-r from-blue-500 via-blue-600 to-blue-500 shadow-[0_0_16px_rgba(99,102,241,0.2)] backdrop-blur-md border border-white/5 hover:scale-102 transition-transform duration-200"
+    >
+      Contribute
+    </a>
+  </div>
+</div>
+
 
       {/* Info Boxes Section */}
       <div className="w-full px-8 py-6 bg-black/80 backdrop-blur-md z-20">
