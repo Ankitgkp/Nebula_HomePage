@@ -12,9 +12,14 @@ const About = () => {
             adipiscing elit.
           </span>
         </h1>
-        <button className="mt-8 text-sm text-white border-b border-blue-500 w-fit hover:text-blue-400 transition">
+        <a
+          href="https://github.com/SASTxNST/Website_SAST"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block mt-10 w-fit px-10 py-3 rounded-full text-white text-lg font-medium bg-gradient-to-r from-blue-500 via-blue-600 to-blue-500 shadow-[0_0_16px_rgba(99,102,241,0.2)] backdrop-blur-md border border-white/5 hover:scale-102 transition-transform duration-200"
+        >
           Contribute
-        </button>
+        </a>
       </div>
 
       <div className="absolute inset-0">
