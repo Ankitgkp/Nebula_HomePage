@@ -5,24 +5,25 @@ import { FaRocket, FaStar, FaGithub, FaCode } from "react-icons/fa";
 const EventsSection: React.FC = () => {
   const events = [
     {
-      title: "Astrothon 2025",
-      date: "June 15, 2025",
+      title: "NASA Space Apps Challenge",
+      date: "Dates to be announced",
       description:
-        "A 36-hour astronomy-themed hackathon where developers, designers, and space lovers unite to build galactic solutions.",
+        "The world’s largest space and science hackathon is coming to our campus! Collaborate with global problem-solvers and build innovative solutions using NASA's open data.",
     },
     {
-      title: "SAST Space Week",
-      date: "July 22–28, 2025",
+      title: "Embedded C Workshop",
+      date: "Dates to be announced",
       description:
-        "A week-long celebration of astrophysics with talks, workshops, and celestial observations.",
+        "A week-long hands-on workshop diving deep into Embedded C programming—ideal for aspiring system-level programmers and space hardware enthusiasts.",
     },
     {
-      title: "Open Source Orbit",
-      date: "August 12, 2025",
+      title: "RC Plane Competition",
+      date: "Dates to be announced",
       description:
-        "A mini-conference for open-source contributors and tech enthusiasts to collaborate and launch new SAST projects.",
+        "Design, build, and fly your own remote-controlled aircraft. Compete in real-world flight challenges that test your engineering and aerodynamics skills.",
     },
   ];
+  
 
   return (
     <div className="relative min-h-screen w-full bg-black flex flex-col items-center justify-center py-20 px-6 overflow-hidden">
