@@ -43,15 +43,22 @@ const testimonialsRow2: Testimonial[] = [
     name: "Abhinav Bajpai",
     title: "Website Team",
   },
-  
   {
     id: 5,
+    text: "Working on the club’s open-source competition platform was a rewarding journey where I experienced the blend of design and development firsthand, enhancing my skills while bringing a dynamic project to life",
+    name: "Prataya Silla",
+    title: "UI/UX Lead, SAST",
+  },
+  
+  
+  {
+    id: 6,
     text: "“Launching Project Nebula in just one week was intense. From building the website to planning outreach and late-night UI/UX reviews, our team gave it everything. Those sleepless nights showed what real collaboration looks like.”.",
     name: "Neelanshu Karn",
     title: "President, SAST",
   },
   {
-    id: 6,
+    id: 7,
     text: "Being Secretary of SAST has been a rewarding journey. From coordinating events to managing last-minute chaos, it taught me adaptability, teamwork, and leadership.",
     name: "Rashmi Anand",
     title: "Secretary, SAST",
