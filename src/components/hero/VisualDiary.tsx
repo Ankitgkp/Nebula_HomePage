@@ -54,7 +54,7 @@ const VisualDiary: React.FC = () => {
     <div className="min-h-screen bg-[#000000] text-white px-4 py-10">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-10">
-          <h1 className="text-4xl font-bold mb-2">My Visual Diary</h1>
+          <h1 className="text-4xl font-bold mb-2">Gallery</h1>
           <p className="text-gray-400">
             A collection of moments frozen in time
           </p>
