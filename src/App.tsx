@@ -9,6 +9,7 @@ import EventsSection from "./components/hero/EventsSection";
 import TeamPage from "./components/hero/TeamPage";
 import AutoScrollingTestimonials from "./components/hero/AutoScrollingTestimonials";
 import FloatingNavbar from "./components/hero/FloatingNavbar";
+import VisualDiary from "./components/hero/VisualDiary";
 
 function App() {
   const fullpageRef = useRef<HTMLDivElement>(null);
@@ -53,6 +54,9 @@ function App() {
         </div>
         <div className="section">
           <AutoScrollingTestimonials />
+        </div>
+        <div className="section">
+          <VisualDiary />
         </div>
         <div className="section">
           <EventsSection />

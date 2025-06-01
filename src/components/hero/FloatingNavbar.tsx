@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const navItems = ["Home", "About", "Contact", "Login"];
+const navItems = ["Home", "About", "Contact", "Contribute", "Login"];
 
 const FloatingNavbar = () => {
   const [hovered, setHovered] = useState<string | null>("Login");
@@ -31,7 +31,9 @@ const FloatingNavbar = () => {
         <AnimatePresence>
           <motion.div
             layout
-            className="absolute top-1 bottom-1 rounded-full bg-white/8 "
+            className={`absolute top-1 bottom-1 rounded-full ${
+              hovered === "Contribute" ? "bg-pink-500/20" : "bg-white/10"
+            }`}
             initial={false}
             animate={{
               left: hoverStyle.left,
@@ -49,7 +51,11 @@ const FloatingNavbar = () => {
             }}
             onMouseEnter={() => setHovered(item)}
             onFocus={() => setHovered(item)}
-            className="relative z-10 px-4 py-2 text-white text-sm cursor-pointer"
+            className={`relative z-10 px-4 py-2 text-sm cursor-pointer ${
+              item === "Contribute"
+                ? "text-pink-400 font-semibold"
+                : "text-white"
+            }`}
           >
             {item}
           </div>
