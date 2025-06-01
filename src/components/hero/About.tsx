@@ -38,15 +38,16 @@ const About = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-xs text-white">
           {[
             {
-              id: "01",
-              title: "Lorem Ipsum",
-              desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus justo vel ante suscipit.",
+              id: "02/06/25",
+              title: "Project Nebula Launch and Orientation",
+              desc: "SAST's Open Source Contribution Challenge Starts",
             },
-            { id: "02", title: "Dolor Sit Amet" },
-            { id: "03", title: "Consectetur Adipiscing" },
-            { id: "04", title: "Eiusmod Tempor" },
-            { id: "05", title: "Incididunt Ut" },
-            { id: "06", title: "Labore et Dolore" },
+            { id: "04/06/25", title: "Your First Open Source Contribution", desc: "SAST x DevClub Presents you the first workshop" },
+            { id: "07/06/25", title: "Hacking Without Hacking",desc: "SAST x SOCS presents to you the second workshop on Intro to OSINT and Social Engineering" },
+            { id: "11/06/25", title: "Branch Out: Real Contributions, Real Repos", desc: "SAST x DevClub Presents you the third workshop Goal: Take beginners from basic PRs to exploring and contributing to real open source projects." },
+            { id: "18/06/25", title: "Open Source Playground & Deep Dive",desc:"SAST x DevClub Presents you the fourth workshop Goal:Let participants freely experiment on a simple HTML/CSS sandbox repo in real-time, then inspire them with why open source matters — fueling their curiosity to dive deeper" },
+            { id: "23/06/25", title: "The Final Push",desc:"The Open Source Contribution Challenge Ends" },
+            { id: "25/06/25", title: "Winner Announcement",desc:"The Open Source Contribution Challenge Winners Announced" },
           ].map((item, i) => (
             <div
               key={i}
