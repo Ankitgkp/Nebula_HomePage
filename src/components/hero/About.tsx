@@ -39,15 +39,39 @@ const About = () => {
           {[
             {
               id: "02/06/25",
-              title: "Project Nebula Launch and Orientation",
-              desc: "SAST's Open Source Contribution Challenge Starts",
+              title: "Project Nebula: Launch & Orientation",
+              desc: "Kickstart the journey! Get introduced to the Open Source Contribution Challenge and learn how to make your first impact.",
             },
-            { id: "04/06/25", title: "Your First Open Source Contribution", desc: "SAST x DevClub Presents you the first workshop" },
-            { id: "07/06/25", title: "Hacking Without Hacking",desc: "SAST x SOCS presents to you the second workshop on Intro to OSINT and Social Engineering" },
-            { id: "11/06/25", title: "Branch Out: Real Contributions, Real Repos", desc: "SAST x DevClub Presents you the third workshop Goal: Take beginners from basic PRs to exploring and contributing to real open source projects." },
-            { id: "18/06/25", title: "Open Source Playground & Deep Dive",desc:"SAST x DevClub Presents you the fourth workshop Goal:Let participants freely experiment on a simple HTML/CSS sandbox repo in real-time, then inspire them with why open source matters — fueling their curiosity to dive deeper" },
-            { id: "23/06/25", title: "The Final Push",desc:"The Open Source Contribution Challenge Ends" },
-            { id: "25/06/25", title: "Winner Announcement",desc:"The Open Source Contribution Challenge Winners Announced" },
+            {
+              id: "04/06/25",
+              title: "First Flight: Your First Contribution",
+              desc: "SAST x DevClub brings a hands-on workshop guiding you through your first ever open-source contribution — simple, friendly, and powerful.",
+            },
+            {
+              id: "07/06/25",
+              title: "Hacking Without Hacking",
+              desc: "Dive into OSINT & Social Engineering with SAST x SOCS. Learn how ethical intelligence works in the real world.",
+            },
+            {
+              id: "11/06/25",
+              title: "Branch Out: Real Repos, Real Impact",
+              desc: "Level up with SAST x DevClub. Go beyond the basics—learn to explore active repositories and make meaningful pull requests.",
+            },
+            {
+              id: "18/06/25",
+              title: "The Open Source Playground",
+              desc: "Get your hands dirty! Experiment in a live HTML/CSS sandbox, then discover how open source is changing the world.",
+            },
+            {
+              id: "23/06/25",
+              title: "The Final Push",
+              desc: "This is it! Wrap up your contributions, polish your work, and submit your final pull requests before the clock runs out.",
+            },
+            {
+              id: "25/06/25",
+              title: "Winner Announcement",
+              desc: "Time to celebrate! Winners of the SAST Open Source Contribution Challenge will be revealed — stay tuned!",
+            },
           ].map((item, i) => (
             <div
               key={i}
