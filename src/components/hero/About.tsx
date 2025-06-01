@@ -64,18 +64,18 @@ const About = () => {
             {
               id: "18/06/25",
               title: "The Open Source Playground",
-              desc: "Get your hands dirty! Experiment in a live HTML/CSS sandbox, then discover how open source is changing the world.",
+              desc: "Get your hands dirty! Experiment in a live HTML/CSS sandbox in this SAST X DevClub Workshop, then discover how open source is changing the world.",
             },
             {
               id: "23/06/25",
               title: "The Final Push",
               desc: "This is it! Wrap up your contributions, polish your work, and submit your final pull requests before the clock runs out.",
             },
-            {
-              id: "25/06/25",
-              title: "Winner Announcement",
-              desc: "Time to celebrate! Winners of the SAST Open Source Contribution Challenge will be revealed — stay tuned!",
-            },
+            // {
+            //   id: "25/06/25",
+            //   title: "Winner Announcement",
+            //   desc: "Time to celebrate! Winners of the SAST Open Source Contribution Challenge will be revealed — stay tuned!",
+            // },
           ].map((item, i) => (
             <div
               key={i}
